@@ -40,7 +40,8 @@
             },
             {
                 "name": "TZ",
-                "label": "TZ"
+                "label": "TZ",
+                "default": "!TZ"
             }
         ]
     }
