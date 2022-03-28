@@ -42,6 +42,11 @@
                 "name": "TZ",
                 "label": "TZ",
                 "default": "!TZ"
+            },
+            {
+                "name": "UMASK",
+                "label": "UMASK",
+                "default": "!UMASK"
             }
         ]
     },
@@ -88,7 +93,223 @@
                 "name": "TZ",
                 "label": "TZ",
                 "default": "!TZ"
+            },
+            {
+                "name": "UMASK",
+                "label": "UMASK",
+                "default": "!UMASK"
             }
         ]
-    }
+    },
+    {
+        "type": 1,
+        "title": "Bazarr",
+        "name": "Bazarr",
+        "description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
+        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bazarr.png",
+        "image": "cr.hotio.dev/hotio/bazarr",
+        "categories": [
+          "Video",
+          "Music"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          {
+            "WebUI": "6767:6767/tcp"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "/config",
+            "bind": "!config/Media/bazarr"
+          },
+          {
+            "container": "/MEDIA",
+            "bind": "!media"
+          }
+        ],
+        "env": [
+          {
+            "name": "PUID",
+            "label": "PUID",
+            "default": "!PUID"
+          },
+          {
+            "name": "PGID",
+            "label": "PGID",
+            "default": "!PGID"
+          },
+          {
+            "name": "TZ",
+            "label": "TZ",
+            "default": "!TZ"
+          },
+          {
+              "name": "UMASK",
+              "label": "UMASK",
+              "default": "!UMASK"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Prowlarr",
+        "name": "Prowlarr",
+        "description": "Prowlarr description",
+        "logo": "https://hotio.dev/img/image-logos/prowlarr.svg",
+        "image": "cr.hotio.dev/hotio/prowlarr:testing",
+        "categories": [
+          "Video"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          {
+            "WebUI": "9696:9696/tcp"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "/config",
+            "bind": "!config/Media/prowlarr"
+          },
+          {
+            "container": "/MEDIA",
+            "bind": "!media"
+        }
+        ],
+        "env": [
+          {
+            "name": "PUID",
+            "label": "PUID",
+            "default": "!PUID"
+          },
+          {
+            "name": "PGID",
+            "label": "PGID",
+            "default": "!PGID"
+          },
+          {
+            "name": "TZ",
+            "label": "TZ",
+            "default": "!TZ"
+          },
+          {
+              "name": "UMASK",
+              "label": "UMASK",
+              "default": "!UMASK"
+          }
+        
+        ]
+      },
+      {
+        "type": 1,
+        "title": "NZBGet",
+        "name": "nzbget",
+        "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players",
+        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nzbget-icon.png",
+        "image": "cr.hotio.dev/hotio/nzbget",
+        "categories": [
+          "Downloaders"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          {
+            "WebUI": "6789:6789/tcp"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "/config",
+            "bind": "!config/Media/Nzbget"
+          },
+          {
+            "container": "/MEDIA",
+            "bind": "!media"
+        }
+        ],
+        "env": [
+            {
+              "name": "PUID",
+              "label": "PUID",
+              "default": "!PUID"
+            },
+            {
+              "name": "PGID",
+              "label": "PGID",
+              "default": "!PGID"
+            },
+            {
+              "name": "TZ",
+              "label": "TZ",
+              "default": "!TZ"
+            },
+            {
+                "name": "UMASK",
+                "label": "UMASK",
+                "default": "!UMASK"
+            }
+          
+          ]
+      },
+      {
+        "type": 1,
+        "title": "qflood",
+        "name": "qflood",
+        "description": "Qbttorent with flood front_end",
+        "logo": "https://hotio.dev/img/image-logos/flood.svg",
+        "image": "cr.hotio.dev/hotio/qflood",
+        "categories": [
+          "Downloaders"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          {
+            "Qbittorent": "8080:8080/tcp",
+            "Flood": "3000:3000/tcp"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "/config",
+            "bind": "!config/Media/qflood"
+          },
+          {
+            "container": "/MEDIA",
+            "bind": "!media"
+        }
+        ],
+        "env": [
+            {
+              "name": "PUID",
+              "label": "PUID",
+              "default": "!PUID"
+            },
+            {
+              "name": "PGID",
+              "label": "PGID",
+              "default": "!PGID"
+            },
+            {
+              "name": "TZ",
+              "label": "TZ",
+              "default": "!TZ"
+            },
+            {
+                "name": "UMASK",
+                "label": "UMASK",
+                "default": "!UMASK"
+            },
+            {
+                "name": "flood_auth",
+                "label": "FLOOD_AUTH",
+                "default": "false"
+            }
+          
+          ]
+      }
+
 ]
