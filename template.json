@@ -20,7 +20,7 @@
         "volumes": [
             {
                 "container": "/config",
-                "bind": "!media_config/sonarr"
+                "bind": "!config/Media/sonarr"
             },
             {
                 "container": "/MEDIA",
