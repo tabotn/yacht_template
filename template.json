@@ -1,0 +1,47 @@
+[
+    {
+        "type": 1,
+        "title": "Sonarr",
+        "name": "sonarr",
+        "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
+        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sonarr-icon.png",
+        "image": "cr.hotio.dev/hotio/sonarr:latest",
+        "categories": [
+            "Downloaders",
+            "Video"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI": "8989:8989/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/config",
+                "bind": "!media_config/Sonarr"
+            },
+            {
+                "container": "/MEDIA",
+                "bind": "!MEDIA"
+            }
+        ],
+        "env": [
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            },
+            {
+                "name": "TZ",
+                "label": "TZ"
+            }
+        ]
+    }
+]
