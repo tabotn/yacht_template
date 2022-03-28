@@ -44,5 +44,51 @@
                 "default": "!TZ"
             }
         ]
+    },
+    {
+        "type": 1,
+      "title": "Radarr",
+      "name": "radarr",
+      "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/radarr.png",
+      "image": "cr.hotio.dev/hotio/radarr",
+        "categories": [
+            "Downloaders",
+            "Video"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI": "7878:7878/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/config",
+                "bind": "!config/Media/radarr"
+            },
+            {
+                "container": "/MEDIA",
+                "bind": "!media"
+            }
+        ],
+        "env": [
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            },
+            {
+                "name": "TZ",
+                "label": "TZ",
+                "default": "!TZ"
+            }
+        ]
     }
 ]
