@@ -52,11 +52,11 @@
     },
     {
         "type": 1,
-      "title": "Radarr",
-      "name": "radarr",
-      "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/radarr.png",
-      "image": "cr.hotio.dev/hotio/radarr",
+        "title": "Radarr",
+        "name": "radarr",
+        "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
+        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/radarr.png",
+        "image": "cr.hotio.dev/hotio/radarr",
         "categories": [
             "Downloaders",
             "Video"
@@ -109,50 +109,50 @@
         "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bazarr.png",
         "image": "cr.hotio.dev/hotio/bazarr",
         "categories": [
-          "Video",
-          "Music"
+            "Video",
+            "Music"
         ],
         "platform": "linux",
         "restart_policy": "unless-stopped",
         "ports": [
-          {
-            "WebUI": "6767:6767/tcp"
-          }
+            {
+                "WebUI": "6767:6767/tcp"
+            }
         ],
         "volumes": [
-          {
-            "container": "/config",
-            "bind": "!config/Media/bazarr"
-          },
-          {
-            "container": "/MEDIA",
-            "bind": "!media"
-          }
+            {
+                "container": "/config",
+                "bind": "!config/Media/bazarr"
+            },
+            {
+                "container": "/MEDIA",
+                "bind": "!media"
+            }
         ],
         "env": [
-          {
-            "name": "PUID",
-            "label": "PUID",
-            "default": "!PUID"
-          },
-          {
-            "name": "PGID",
-            "label": "PGID",
-            "default": "!PGID"
-          },
-          {
-            "name": "TZ",
-            "label": "TZ",
-            "default": "!TZ"
-          },
-          {
-              "name": "UMASK",
-              "label": "UMASK",
-              "default": "!UMASK"
-          }
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            },
+            {
+                "name": "TZ",
+                "label": "TZ",
+                "default": "!TZ"
+            },
+            {
+                "name": "UMASK",
+                "label": "UMASK",
+                "default": "!UMASK"
+            }
         ]
-      },
-      {
+    },
+    {
         "type": 1,
         "title": "Prowlarr",
         "name": "Prowlarr",
@@ -160,50 +160,49 @@
         "logo": "https://hotio.dev/img/image-logos/prowlarr.svg",
         "image": "cr.hotio.dev/hotio/prowlarr:testing",
         "categories": [
-          "Video"
+            "Video"
         ],
         "platform": "linux",
         "restart_policy": "unless-stopped",
         "ports": [
-          {
-            "WebUI": "9696:9696/tcp"
-          }
+            {
+                "WebUI": "9696:9696/tcp"
+            }
         ],
         "volumes": [
-          {
-            "container": "/config",
-            "bind": "!config/Media/prowlarr"
-          },
-          {
-            "container": "/MEDIA",
-            "bind": "!media"
-        }
+            {
+                "container": "/config",
+                "bind": "!config/Media/prowlarr"
+            },
+            {
+                "container": "/MEDIA",
+                "bind": "!media"
+            }
         ],
         "env": [
-          {
-            "name": "PUID",
-            "label": "PUID",
-            "default": "!PUID"
-          },
-          {
-            "name": "PGID",
-            "label": "PGID",
-            "default": "!PGID"
-          },
-          {
-            "name": "TZ",
-            "label": "TZ",
-            "default": "!TZ"
-          },
-          {
-              "name": "UMASK",
-              "label": "UMASK",
-              "default": "!UMASK"
-          }
-        
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            },
+            {
+                "name": "TZ",
+                "label": "TZ",
+                "default": "!TZ"
+            },
+            {
+                "name": "UMASK",
+                "label": "UMASK",
+                "default": "!UMASK"
+            }
         ]
-      },
-      {
+    },
+    {
         "type": 1,
         "title": "NZBGet",
         "name": "nzbget",
@@ -211,50 +210,49 @@
         "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nzbget-icon.png",
         "image": "cr.hotio.dev/hotio/nzbget",
         "categories": [
-          "Downloaders"
+            "Downloaders"
         ],
         "platform": "linux",
         "restart_policy": "unless-stopped",
         "ports": [
-          {
-            "WebUI": "6789:6789/tcp"
-          }
+            {
+                "WebUI": "6789:6789/tcp"
+            }
         ],
         "volumes": [
-          {
-            "container": "/config",
-            "bind": "!config/Media/nzbget"
-          },
-          {
-            "container": "/MEDIA",
-            "bind": "!media"
-        }
+            {
+                "container": "/config",
+                "bind": "!config/Media/nzbget"
+            },
+            {
+                "container": "/MEDIA",
+                "bind": "!media"
+            }
         ],
         "env": [
             {
-              "name": "PUID",
-              "label": "PUID",
-              "default": "!PUID"
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
             },
             {
-              "name": "PGID",
-              "label": "PGID",
-              "default": "!PGID"
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
             },
             {
-              "name": "TZ",
-              "label": "TZ",
-              "default": "!TZ"
+                "name": "TZ",
+                "label": "TZ",
+                "default": "!TZ"
             },
             {
                 "name": "UMASK",
                 "label": "UMASK",
                 "default": "!UMASK"
             }
-          
-          ]
-      },
-      {
+        ]
+    },
+    {
         "type": 1,
         "title": "qflood",
         "name": "qflood",
@@ -262,41 +260,41 @@
         "logo": "https://hotio.dev/img/image-logos/flood.svg",
         "image": "cr.hotio.dev/hotio/qflood",
         "categories": [
-          "Downloaders"
+            "Downloaders"
         ],
         "platform": "linux",
         "restart_policy": "unless-stopped",
         "ports": [
-          {
-            "Qbittorent": "8080:8080/tcp",
-            "Flood": "3000:3000/tcp"
-          }
+            {
+                "Qbittorent": "8080:8080/tcp",
+                "Flood": "3000:3000/tcp"
+            }
         ],
         "volumes": [
-          {
-            "container": "/config",
-            "bind": "!config/Media/qflood"
-          },
-          {
-            "container": "/MEDIA",
-            "bind": "!media"
-        }
+            {
+                "container": "/config",
+                "bind": "!config/Media/qflood"
+            },
+            {
+                "container": "/MEDIA",
+                "bind": "!media"
+            }
         ],
         "env": [
             {
-              "name": "PUID",
-              "label": "PUID",
-              "default": "!PUID"
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
             },
             {
-              "name": "PGID",
-              "label": "PGID",
-              "default": "!PGID"
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
             },
             {
-              "name": "TZ",
-              "label": "TZ",
-              "default": "!TZ"
+                "name": "TZ",
+                "label": "TZ",
+                "default": "!TZ"
             },
             {
                 "name": "UMASK",
@@ -308,8 +306,74 @@
                 "label": "FLOOD_AUTH",
                 "default": "false"
             }
-          
-          ]
-      }
+        ]
+    },
+    {
+        "type": 1,
+        "title": "Plex",
+        "name": "plex",
+        "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
+        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/plex-icon.png",
+        "image": "cr.hotio.dev/hotio/plex:latest",
+        "categories": [
+            "Video",
+            "Music",
+            "Photos"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI": "32400:32400/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/config",
+                "bind": "!config/Media/Plex"
+            },
+            {
+                "container": "/MEDIA",
+                "bind": "!media"
+            }
+        ],
+        "env": [
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            },
+            {
+                "name": "TZ",
+                "label": "TZ",
+                "default": "!TZ"
+            },
+            {
+                "name": "UMASK",
+                "label": "UMASK",
+                "default": "!UMASK"
+            },
+            {
+                "name": "PLEX_CLAIM",
+                "label": "PLEX_CLAIM",
+                "default": ""
+            },
+            {
+                "name": "PLEX_PASS",
+                "label": "PLEX_PASS",
+                "default": "yes"  
+            },
+            {
+                "name": "device",
+                "label": "device",
+                "default": "/dev/dri:/dev/dri"
+            }
 
+        ]
+    }
 ]
