@@ -223,7 +223,7 @@
         "volumes": [
           {
             "container": "/config",
-            "bind": "!config/Media/Nzbget"
+            "bind": "!config/Media/nzbget"
           },
           {
             "container": "/MEDIA",
